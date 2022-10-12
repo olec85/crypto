@@ -1,0 +1,12 @@
+@import 'normalize.css';
+@import 'fonts.css';
+@import 'default.css';
+@import 'module/header.css';
+@import 'module/navigation.css';
+@import 'module/hero.css';
+@import 'module/about-us.css';
+@import 'module/advantage.css';
+@import 'module/exchange-rates.css';
+@import 'module/faq.css';
+@import 'module/modal.css';
+@import 'module/footer.css'

@@ -1,0 +1,98 @@
+.faq {
+    padding: 40px 0;
+}
+
+.faq__title {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 53px;
+    color: #55C2FF;
+    margin-bottom: 34px;
+}
+
+.faq__item {
+    margin-bottom: 15px;
+    border: 2px solid #265D77;
+    border-radius: 20px;
+}
+
+.faq__item:last-child {
+    margin-bottom: 0;
+}
+
+.faq__question {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    text-align: left;
+    gap: 5px;
+    padding: 18px 33px;
+    background-color: transparent;
+    border: none;
+    font-size: 26px;
+    line-height: 31px;
+    transition: color 0.36s ease-in-out;
+}
+
+.faq__question:after {
+    content: '';
+    width: 25px;
+    height: 18px;
+    flex-shrink: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='23' height='14' viewBox='0 0 23 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5 14L22.3253 0.5H0.674683L11.5 14Z' fill='%2308475E'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: background-image 0.36s ease-in-out;
+}
+
+.faq__item-show .faq__question,
+.faq__item:hover .faq__question {
+    color: #55C2FF;
+}
+
+
+.faq__item:hover .faq__question:after,
+.faq__item-show .faq__question:after {
+    background-image: url("data:image/svg+xml,%3Csvg width='23' height='14' viewBox='0 0 23 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5 14L22.3253 0.5H0.674683L11.5 14Z' fill='%2355C2FF'/%3E%3C/svg%3E ");
+}
+
+.faq__dropdown {
+    padding: 0 100px 18px 33px;
+}
+
+.faq__item:not(.faq__item-show) .faq__answer {
+    display: none;
+}/*//если класс faq__item не имеет show то в таком случае faq__answer будет дисплей none*/
+
+
+@media (max-width:768px) {
+    .faq__question {
+    font-size: 18px;
+    line-height: 22px;
+    }
+
+    .faq__answer {
+    font-size: 14px;
+    line-height: 18px;
+    }
+}
+
+@media (max-width:480px) {
+    .faq__question {
+        font-size: 16px;
+        line-height: 19px;
+        padding: 10px;
+    }
+
+    .faq__question:after {
+        width: 18px;
+        height: 12px;
+    }
+
+    .faq__dropdown {
+        padding: 0 10px 10px;
+    }
+    
+}
